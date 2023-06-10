@@ -1,6 +1,7 @@
 const controle = document.querySelectorAll('[data-controle]')
 const estatistica = document.querySelectorAll('[data-estatistica]')
 const robo = document.querySelector('.robo')
+const button = document.querySelectorAll('[data-alterar]')
 
 
 const pecas = {
@@ -69,6 +70,12 @@ function atualizaEstatisticas(peca, operação) {
         }
     })
 }
+
+button.forEach((elemento) => {
+    elemento.addEventListener('click', (evento) => {
+        mudarCor(evento.target.dataset.alterar)
+    })
+})
 
 
 function mudarCor(cor) {
