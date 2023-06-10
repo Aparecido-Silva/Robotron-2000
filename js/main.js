@@ -1,5 +1,7 @@
 const controle = document.querySelectorAll('[data-controle]')
 const estatistica = document.querySelectorAll('[data-estatistica]')
+const robo = document.querySelector('.robo')
+
 
 const pecas = {
     "bracos": {
@@ -68,3 +70,7 @@ function atualizaEstatisticas(peca, operação) {
     })
 }
 
+
+function mudarCor(cor) {
+    robo.setAttribute('src', '/img/robos/'+ cor +'.png')
+}
